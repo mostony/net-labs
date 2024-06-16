@@ -10,7 +10,7 @@ def check_size(
 ) -> bool:
     if verbose:
         print(f"Пингуем пакет размера {packet_size}")
-    if platform.system().lower() == "Windows":
+    if platform.system().lower() == "windows":
         command = f"ping {hostname} -f -l {packet_size}"
     else:
         command = f"ping {hostname} -D -c 1 -s {packet_size}"
